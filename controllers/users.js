@@ -24,3 +24,9 @@ export const createUser = (req, res) => {
 export const getUser = (req, res) => {
   res.send(req.params.id);
 };
+
+export const deleteUser = (req, res) => {
+  console.log(`user with id ${req.params.id} has been deleted`);
+
+  users = users.filter((user) => user.id !== req.params.id);
+};
